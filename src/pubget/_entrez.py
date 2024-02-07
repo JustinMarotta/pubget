@@ -297,7 +297,11 @@ class EntrezClient:
         "querykey".
 
         """
-        term = "open+access[filter]"
+        
+        #alter term to remove open access filter
+        #term = "open+access[filter]"
+        term = ""
+        
         if query is not None:
             term = "&".join((query, term))
         data = {
